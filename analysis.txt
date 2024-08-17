@@ -1,0 +1,45 @@
+Incident: Connection to Honeypot
+Severity: High
+Date & Time: 2024-08-05 14:11:51.343
+
+
+Details:
+Destination IP: 20.217.82.120
+Destination Port: 445
+Hostname: 16c801c2-5183-41ef-916b-000d3a556b22
+Protocol: TCP
+Server Type: Dionaea Honeypot
+Source Information:
+Source IP: 202.61.47.68
+Source Port: 62064
+MD5 Hash: 0ab2ade90228132167e51273332d0782
+SHA-256 Hash: 806269373b6d1f0da28665ebfcbc2f36ae679103e7a7ebee74db1ecfddf9dbf7610517935306db7137466dbda3cc579d6b85b8a83187f570b31c3af7b75b
+
+
+Analysis:
+Source IP Information:
+Range: 202.61.32.0 - 202.61.63.255
+Netname: LINKdotNET
+Description: LINKdotNET Telecom Limited, Network Service Provider
+Country: Pakistan
+Location: Islamabad
+Reported to AbuseIPDB: 601 times
+Attack Port: 445 (consistent with previous activity)
+VirusTotal Results:
+IP: 6/94 detections
+Hash: 63/68 (identified as WannaCry)
+
+
+Additional Analysis:
+AnyRun Verdict: Malicious
+Joe Sandbox Verdict: Malicious
+
+
+Conclusion:
+The source IP address attempted to send a WannaCry variant over port 445 to the honeypot, which is consistent with known WannaCry behavior. The IP has a well-documented malicious reputation.
+
+
+Actions Taken:
+Blocked the source IP address at the firewall.
+Logged the hash for further analysis.
+
